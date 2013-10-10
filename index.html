@@ -1,20 +1,38 @@
-<!DOCTYPE html>
-<html style="height:400px;"> 
-	<head>
-		<title>TEST</title>
-		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-	
-		
-		
-	</head>
-	<body>
-	<frameset rows="75%,25%">
-	<frameset>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>aerty<br/>
-		
-	</frameset>
-	<frameset style="background:#ccc;">uiop</frameset>
-	</frameset>
-		
-	</body>
-</html>
+<!DOCTYPE html> 
+<html> 
+<head><title>jQM Fixed Footer</title> 
+<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.1.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>
+</head><body> 
+<div id="page1" data-role="page" data-theme="e">
+  <div data-role="header"><h1>jQM Fixed Footer</h1></div>  <!-- /header -->
+
+  <div data-role="content" id="content1">
+    <div id="text1" class="ui-body-i ui-btn-corner-all" style="padding: 12px 0 20px 20px; margin:20px 20px; font-size:18px;">
+     <h2>Content 1:</h2><br>Fixed footer bar position is not refreshed when content-div is replaced.<br>
+     This is the first content-div.<br>It has just some lines of text to make it heigher than the second, currently hidden, content-div.<br>
+     The button below will hide this content and the second div, which is smaller than this, will be shown.
+    </div>
+    <input type="button" id="but1" value="show content 2" />
+  </div> <!-- /content1 -->
+
+  <div data-role="content" id="content2">
+    <div id="text2" class="ui-btn-corner-all" style="background-color:khaki; padding: 6px 6px 3px 20px; margin:10px 20px; font-size:16px;">
+      <strong>Content 2:</strong><br>The fixed footer bar moves up and stays somewhere on the page.<br>If you click / tap two times, the footer-bar is moved back to the bottom of the page.<br>If you then click the button to show content 1 again, the footer is out of the page until you click / tap again twice.
+    </div>
+    <input type="button" id="but2" value="show content 1" />
+  </div> <!-- /content2 -->
+
+  <div data-role="footer" data-position="fixed" data-theme="b">
+    <h4>Fixed Page Footer</h4>
+  </div><!-- /footer -->
+
+<script type="text/javascript">
+ $(document).ready( function() { $("#content2").hide(); });
+ $("#but1").click( function() { $("#content1").hide(); $("#content2").show(); });
+ $("#but2").click( function() { $("#content2").hide(); $("#content1").show(); });
+</script>
+</div>  <!-- /page1 -->
+</body></html>
